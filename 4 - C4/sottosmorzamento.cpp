@@ -16,7 +16,6 @@
 
 using namespace std;
 
-//bisogna definre la funzione Req
 
 double funzione (double * x,double * par){
     double h = par[0]*exp(-par[1]*x[0])*(par[1]*cos(par[2]*x[0])+par[2]*sin(par[2]*x[0]));
@@ -27,8 +26,8 @@ int main(int argc, char** argv){
 
 
     TGraphErrors* myGraph = new TGraphErrors(argv[1]);
-    myGraph->GetXaxis()->SetTitle("V (V)");
-    myGraph->GetYaxis()->SetTitle("t (s)");
+    myGraph->GetXaxis()->SetTitle("t (s)");
+    myGraph->GetYaxis()->SetTitle("V (V)");
     myGraph->SetMarkerStyle(20);
     myGraph->SetMarkerSize(1);
 

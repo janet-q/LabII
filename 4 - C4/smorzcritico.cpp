@@ -16,8 +16,6 @@
 
 using namespace std;
 
-//bisogna definre la funzione Req
-
 double smorzcritico (double *x, double *par) {
         double result = par[0]*pow(par[1],2)*x[0]*exp(-(par[1]*x[0]));
         return result;
@@ -34,7 +32,7 @@ int main(int argc, char** argv){
 
     //DEFINISCO LA MIA FUNZIONE
     TF1* myFun = new TF1("myFun", smorzcritico, -0.01, 0.0019, 2);
-    myFun->SetParameter(0, 0.0005); //3e-5
+    myFun->SetParameter(0, 5e-4); //5e-4
     myFun->SetParameter(1, 11333);
 
     myFun->SetParName(0,"amp");

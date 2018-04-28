@@ -16,8 +16,6 @@
 
 using namespace std;
 
-//bisogna definre la funzione Req
-
 double sovrasmorzamento (double *x, double *par) {
         double result = par[0]*(exp(-x[0]*(par[1]-sqrt(pow(par[1],2)-pow(par[2],2))))-exp(-x[0]*(par[1]+sqrt(pow(par[1],2)-pow(par[2],2)))));
         return result;
@@ -25,7 +23,7 @@ double sovrasmorzamento (double *x, double *par) {
 
 int main(int argc, char** argv){
 
-//controllo che sia stato inserito il parametro
+
 
     TGraphErrors* myGraph = new TGraphErrors(argv[1]);
     myGraph->GetXaxis()->SetTitle("t (s)");
