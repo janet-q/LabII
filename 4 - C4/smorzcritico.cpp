@@ -26,12 +26,6 @@ double smorzcritico (double *x, double *par) {
 
 int main(int argc, char** argv){
 
-//controllo che sia stato inserito il parametro
-    if (argc < 3){
-        cout << "metti il nome" <<endl;
-        return 1;
-    }
-
     TGraphErrors* myGraph = new TGraphErrors(argv[1]);
     myGraph->GetXaxis()->SetTitle("t (s)");
     myGraph->GetYaxis()->SetTitle("V (V)");

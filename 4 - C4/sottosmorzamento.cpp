@@ -19,17 +19,12 @@ using namespace std;
 //bisogna definre la funzione Req
 
 double funzione (double * x,double * par){
-    double h = par[0]*exp(-par[1]*x[0])*(par[1]*cos(par[2]*x[0])+par[2]*sin(par[2]*x[0]);
+    double h = par[0]*exp(-par[1]*x[0])*(par[1]*cos(par[2]*x[0])+par[2]*sin(par[2]*x[0]));
     return h;
 }
 
 int main(int argc, char** argv){
 
-//controllo che sia stato inserito il parametro
-    if (argc < 3){
-        cout << "metti il nome" <<endl;
-        return 1;
-    }
 
     TGraphErrors* myGraph = new TGraphErrors(argv[1]);
     myGraph->GetXaxis()->SetTitle("V (V)");
